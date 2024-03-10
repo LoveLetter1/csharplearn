@@ -6,8 +6,12 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            Tool.OutAsPara(out Student student);
-            Console.WriteLine(student.GetHashCode());
+            int[] paras = { 1, 2, 3 };
+            Tool.ArrayPara(paras);
+            foreach (var i in paras)
+            {
+                Console.WriteLine(i);
+            }
         }
         
         
@@ -37,6 +41,22 @@ namespace Csharp_learn
         {
             result = new Student();
             result.Age = 50;
+        }
+
+        static public void ListPara(params int[] paras)
+        {
+            foreach (var i in paras)
+            {
+                    Console.WriteLine(i);
+            }
+        }
+
+        static public void ArrayPara(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] += 5;
+            }
         }
     }
 

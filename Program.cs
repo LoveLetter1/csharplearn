@@ -7,7 +7,7 @@ namespace Csharp_learn
         public static void Main(string[] args)
         {
             Time time = new Time();
-            Console.WriteLine(time.TimeOfInstantiation);
+            Console.WriteLine(time.NextRandom());
         }
         
         
@@ -90,15 +90,26 @@ namespace Csharp_learn
         // private字段使用_驼峰
         // public字段和属性使用首字母大写
         private DateTime _timeOfInstantiation;
+        private static Random _random;
         public DateTime TimeOfInstantiation
         {
             get { return _timeOfInstantiation; }
         }
         //析构器
-        //public析构器可以外部使用，private析构器只能类内部使用
+        //public构造函数可以外部使用，private析构器只能类内部使用
         public Time()
         {
             _timeOfInstantiation = DateTime.Now;
+        }
+        //静态析构函数初始化静态字段
+        static Time()
+        {
+            _random = new Random();
+        }
+
+        public int NextRandom()
+        {
+            return _random.Next();
         }
     }
 }

@@ -6,12 +6,8 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            int[] paras = { 1, 2, 3 };
-            Tool.ArrayPara(paras);
-            foreach (var i in paras)
-            {
-                Console.WriteLine(i);
-            }
+            Time time = new Time();
+            Console.WriteLine(time.TimeOfInstantiation);
         }
         
         
@@ -21,26 +17,21 @@ namespace Csharp_learn
     {
         static public void Change(Student student)
         {
-            student.Age = student.Age + 5;
+            student.age = student.age + 5;
         }
-
-        static public void Add(ref int number)
-        {
-            number += 5;
-        }
-
+        
         static public void RefAsPara(ref Student student)
         {
-            student.Age = 50;
-            Console.WriteLine(student.Age);
+            student.age = 50;
+            Console.WriteLine(student.age);
             student = new Student();
-            Console.WriteLine(student.Age);
+            Console.WriteLine(student.age);
         }
 
         static public void OutAsPara(out Student result)
         {
             result = new Student();
-            result.Age = 50;
+            result.age = 50;
         }
 
         static public void ListPara(params int[] paras)
@@ -58,10 +49,56 @@ namespace Csharp_learn
                 array[i] += 5;
             }
         }
+
+        static public int Add(int x, Student student = null)
+        {
+            return x;
+        }
+
     }
 
     public class Student
     {
-        public int Age = 10;
+        // const和static无法同时出现
+        // public const/static int 顺序比较优雅
+        public const int num = 100;
+        public int age = 10;
+        private int grade = 5;
+
+        public int Grade
+        {
+            get => grade;
+        }
+
+    }
+    public class Rectangle
+    {
+        private double a=3.6;
+        private double b=4.0;
+
+        public double Area
+        {
+            get
+            {
+                return a * b;
+            }
+        }
+    }
+
+    public class Time
+    {
+        // private字段使用_驼峰
+        // public字段和属性使用首字母大写
+        private DateTime _timeOfInstantiation;
+        public DateTime TimeOfInstantiation
+        {
+            get { return _timeOfInstantiation; }
+        }
+        //析构器
+        //public析构器可以外部使用，private析构器只能类内部使用
+        public Time()
+        {
+            _timeOfInstantiation = DateTime.Now;
+        }
     }
 }

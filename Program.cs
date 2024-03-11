@@ -1,4 +1,5 @@
 ﻿using System;
+using Csharp_learn.Class;
 
 namespace Csharp_learn
 {
@@ -6,8 +7,8 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            Time time = new Time();
-            Console.WriteLine(time.NextRandom());
+            PartClass partClass = new PartClass();
+            partClass.Add(3,4);
         }
         
         
@@ -84,7 +85,6 @@ namespace Csharp_learn
             }
         }
     }
-
     public class Time
     {
         // private字段使用_驼峰

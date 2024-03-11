@@ -127,4 +127,64 @@ namespace Csharp_learn.Class
         // 该类是否和MyClass处于同一程序集
         
     }
+    public class MyClassSon : MyClass
+    {
+        public MyClassSon()
+        {
+            ProtectedVar = 5;
+        }
+        public void Print()
+        {
+            Console.WriteLine(ProInterVar);
+            Console.WriteLine(ProtectedVar);
+        }
+    }
+    // 抽象成员有四种类型：方法、属性、事件、索引器
+    // 相对于virtual，abstract必须被重写
+    // 抽象成员只能在抽象类中声明
+    // 抽象类不能创建实例
+    public abstract class Weapon
+    {
+        public int SideLength = 10;
+        public const int TriSideCount = 3;
+        public abstract void Print(string s);
+        public abstract int MyInt { get; set; }
+    }
+
+    public class Gun : Weapon
+    {
+        private int _myInt;
+        public override void Print(string s)
+        {
+            Console.WriteLine(s);
+        }
+
+        public override int MyInt
+        {
+            get
+            {
+                return _myInt;
+            }
+            set
+            {
+                _myInt = value;
+            }
+        }
+    }
+    // 密封类不能被继承，不能当基类
+    sealed class Seal
+    {
+        
+    }
+    //静态类中所有成员都是静态的
+    //静态类用于存放不受实例数据影响的数据和函数
+    //常见有math库的实现
+    //静态类可以有静态构造函数，不能有实例构造函数
+    //静态类不能继承
+    public static class MyMath
+    {
+        public static int _num;
+        public static void Print(){}
+        
+    }
 }

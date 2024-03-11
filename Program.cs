@@ -7,9 +7,7 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            User user = new User("mike");
-            Console.WriteLine($"{user.UserId},{user.UserName},{user.Field1}");
-
+            
         }
         
     }

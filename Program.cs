@@ -7,11 +7,9 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            OtherClass otherClass = new OtherClass();
-            otherClass.Method1(otherClass.Field1);
-            otherClass.Method1(otherClass.Field2);
-            otherClass.Method2(otherClass.Field1);
-            otherClass.Method2(otherClass.Field1);
+            User user = new User("mike");
+            Console.WriteLine($"{user.UserId},{user.UserName},{user.Field1}");
+
         }
         
     }

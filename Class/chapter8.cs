@@ -112,4 +112,19 @@ namespace Csharp_learn.Class
     {
         
     }
+    // 成员的访问级别有5种：public,private,protected,internal,protected internal
+    // 所有显式声明在类声明中的成员都是互相可见的，无论他们的访问性如何
+    // 成员的访问级别不能比类高
+    public class MyClass
+    {
+        public int PublicVar;
+        private int PrivateVar;
+        protected int ProtectedVar;
+        internal int InternalVar;
+        protected internal int ProInterVar;
+        // 另一个类能否访问这些成员主要取决于2个特征：
+        // 该类是否继承MyClass
+        // 该类是否和MyClass处于同一程序集
+        
+    }
 }

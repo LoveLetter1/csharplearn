@@ -187,4 +187,33 @@ namespace Csharp_learn.Class
         public static void Print(){}
         
     }
+    //扩展方法的使用
+    public class MyData
+    {
+        private double _d1;
+        private double _d2;
+        private double _d3;
+
+        public MyData(double d1, double d2, double d3)
+        {
+            _d1 = d1;
+            _d2 = d2;
+            _d3 = d3;
+        }
+
+        public double Sum()
+        {
+            return _d1 + _d2 + _d3;
+        }
+    }
+    // 声明扩展方法的类必须是static
+    // 扩展方法本身必须是static 
+    // 扩展方法必须包含关键字this作为第一个参数，this后面跟需要扩展的类
+    public static class ExtendMyData
+    {
+        public static double Average(this MyData md)
+        {
+            return md.Sum() / 3;
+        }
+    }
 }

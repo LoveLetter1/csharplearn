@@ -40,9 +40,11 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Class\chapter10.cs" />
         <Compile Include="Class\chapter1~6.cs" />
         <Compile Include="Class\chapter7.cs" />
         <Compile Include="Class\chapter8.cs" />
+        <Compile Include="Class\chapter9.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

@@ -9,9 +9,8 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            MyArray myArray = new MyArray();
-            myArray.Print();
-            var arr = new[]{ 1, 2, 3 };
+            ClassTwo classTwo = new ClassTwo();
+            classTwo.PrintNew(5);
         }
         
     }

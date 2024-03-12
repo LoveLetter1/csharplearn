@@ -43,6 +43,7 @@
         <Compile Include="Class\chapter12.cs" />
         <Compile Include="Class\chapter11.cs" />
         <Compile Include="Class\chapter13.cs" />
+        <Compile Include="Class\chapter14.cs" />
         <Compile Include="Class\chapter1~6.cs" />
         <Compile Include="Class\chapter7.cs" />
         <Compile Include="Class\chapter8.cs" />

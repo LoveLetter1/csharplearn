@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Threading;
 using Csharp_learn.Class;
 
 namespace Csharp_learn
@@ -8,7 +9,7 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(nameof(System.Math));
+
         }
         
     }

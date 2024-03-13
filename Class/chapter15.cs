@@ -39,4 +39,10 @@ namespace Csharp_learn.Class
          DozensCount++;
       }
    }
+   //通过扩展EventArgs来传递数据
+   public class IncrementerEventArgs : EventArgs
+   {
+      public int IterationCount { get; set; }
+      
+   }
 }

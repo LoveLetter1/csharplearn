@@ -9,8 +9,7 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            ClassTwo classTwo = new ClassTwo();
-            classTwo.PrintNew(5);
+            
         }
         
     }

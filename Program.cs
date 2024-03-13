@@ -9,7 +9,10 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            
+            Incrementer incrementer = new Incrementer();
+            Dozens dozens = new Dozens(incrementer);
+            incrementer.DoCount();
+            Console.WriteLine(dozens.DozensCount);
         }
         
     }

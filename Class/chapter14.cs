@@ -115,7 +115,7 @@ namespace Csharp_learn.Class
             //匿名方法有点冗余，因此C#3.0引入Lambda表达式
             //Lambda表达式删除delegate关键字
             //在参数列表和匿名方法主体之间使用 =>
-            Lam lam1 = (int x) => { return x + 1; }; 
+            Lam lam1 = (int x) => { return x + 1; };
             Lam lam2 = x => { return x + 1; };
             Lam lam3 = x => x + 1; //最简洁
             Console.WriteLine(lam1(1));

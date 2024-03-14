@@ -134,17 +134,17 @@ namespace Csharp_learn.Class
     {
         public void PrintOut1(string x)
         {
-            throw new NotImplementedException();
+
         }
 
         public void PrintOut2(string x)
         {
-            throw new NotImplementedException();
+
         }
 
         public void PrintOut3(string x)
         {
-            throw new NotImplementedException();
+
         }
     }
     

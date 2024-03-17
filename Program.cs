@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Reflection;
 using System.Threading;
+using ClassLibrary1;
 using Csharp_learn.Class;
+using MyMath = ClassLibrary1.MyMath;
 
 namespace Csharp_learn
 {
@@ -9,10 +11,8 @@ namespace Csharp_learn
     {
         public static void Main(string[] args)
         {
-            Incrementer incrementer = new Incrementer();
-            Dozens dozens = new Dozens(incrementer);
-            incrementer.DoCount();
-            Console.WriteLine(dozens.DozensCount);
+            MyMath myMath = new MyMath(2, 3);
+            myMath.Add();
         }
         
     }
